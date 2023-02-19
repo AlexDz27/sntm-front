@@ -1,0 +1,1339 @@
+.none {
+  display: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poiret One", sans-serif;
+  background-image: url("img/main/bear-bg.jpg");
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Edirne";
+  src: url("fonts/Edirne.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header-content {
+  max-width: 1200px;
+  background-color: #274335;
+  margin: 0 auto;
+}
+
+.header-container {
+  padding: 0 55px;
+}
+
+.header-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-top .top-link {
+  color: #C0FF99;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 37.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.content-title .title-link {
+  color: #89CB35;
+}
+.content-title .title-link .link-title {
+  font-family: "Edirne";
+  font-weight: 400;
+  font-size: 75px;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+.content-reg:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 944px) {
+  .header-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 80;
+  }
+  .header-container {
+    padding: 0 24px;
+  }
+  .content-top {
+    display: none;
+  }
+  .content-top .top-link {
+    display: none;
+  }
+  .content-reg {
+    display: none;
+  }
+  .header-block {
+    justify-content: center;
+  }
+  .content-title .title-link .link-title {
+    font-size: 50px;
+    margin-bottom: 6px;
+  }
+}
+@media (max-width: 470px) {
+  .content-title .title-link .link-title {
+    font-size: 45px;
+  }
+}
+.header-left-block {
+  display: none;
+}
+
+.navbar-none {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.menu-icon-wrapper {
+  background: #274335;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: relative;
+  width: 29px;
+  height: 2px;
+  background-color: #B4E397;
+  border-radius: 2px;
+}
+
+.menu-icon::before {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  content: "";
+  width: 29px;
+  height: 2px;
+  background-color: #B4E397;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  border-radius: 2px;
+}
+
+.menu-icon::after {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  content: "";
+  width: 29px;
+  height: 2px;
+  background-color: #B4E397;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  border-radius: 2px;
+}
+
+.menu-icon.menu-icon-active {
+  background-color: transparent;
+}
+
+.menu-icon.menu-icon-active::before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.menu-icon.menu-icon-active::after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+@media (max-width: 944px) {
+  .header-left-block {
+    display: block;
+  }
+  .no-scrol {
+    overflow-y: hidden;
+  }
+  .navbar-none {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .navbar .nav-style {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.87);
+  }
+  .navbar .nav-style .menu-li {
+    display: block;
+    margin-bottom: 13px;
+  }
+  .navbar .nav-style .menu-li .links-menu {
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 27px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.7;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-toggle .menu-icon-wrapper {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+  }
+  .nav-toggle .menu-icon-wrapper .menu-icon {
+    display: block;
+    z-index: 60;
+  }
+  .content-title {
+    display: block;
+    z-index: 60;
+  }
+}
+@media (max-width: 710px) {
+  .navbar .nav-style .menu-li {
+    margin-bottom: 16px;
+  }
+  .navbar .nav-style .menu-li .links-menu {
+    font-size: 21px;
+  }
+}
+@media (max-width: 470px) {
+  .nav-toggle .menu-icon-wrapper {
+    top: 9px;
+    right: 15px;
+  }
+  .menu-icon {
+    width: 25px;
+  }
+  .menu-icon::before {
+    width: 25px;
+    top: -6px;
+  }
+  .menu-icon::after {
+    width: 25px;
+    top: 6px;
+  }
+  .navbar .nav-style .menu-li {
+    margin-bottom: 12px;
+  }
+  .navbar .nav-style .menu-li .links-menu {
+    font-size: 18px;
+  }
+}
+.img-title-content {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+.img-title-content img {
+  height: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 944px) {
+  .img-title-content {
+    margin-top: 65px;
+  }
+}
+@media (max-width: 470px) {
+  .img-title-content {
+    margin-top: 47px;
+  }
+}
+.main-contents {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-left-content {
+  width: 100%;
+  background-color: #374940;
+}
+
+.left-conteiner {
+  padding: 0 45px 0 43px;
+}
+
+.left-description {
+  margin-top: 52px;
+}
+
+.description-title .title-descr {
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+
+.brcklbr {
+  color: #89CB35;
+}
+
+.spnbrc {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title-line {
+  width: 100%;
+  height: 2px;
+  background-color: #B4E397;
+  border-radius: 1px;
+}
+
+.sub-title {
+  margin-top: 18px;
+  text-align: justify;
+}
+.sub-title .sub-title-text {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  -webkit-text-stroke: 0.1px #fff;
+}
+
+.all-season-title {
+  margin-top: 83px;
+}
+
+.title-season .season-title-text {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 37px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.all-seasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 372px);
+  gap: 50px 50px;
+  margin: 43px auto;
+  justify-content: center;
+  margin-bottom: 97px;
+}
+
+.season-contain {
+  width: 372px;
+  height: 283px;
+  background-color: linear-gradient(288.49deg, rgba(107, 174, 150, 0.1292) -3.9%, rgba(107, 174, 150, 0) 106.23%);
+  filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+  border: 1.5px solid #B4E397;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+}
+
+.season-img {
+  width: 348px;
+  height: 204px;
+  margin: 12px 12px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+.season-img img {
+  border-radius: 6px;
+  width: 348px;
+  height: 204px;
+}
+
+.season-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 35px;
+}
+
+.number-title {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #89CB35;
+}
+
+.number-text {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.out-line-bottom {
+  margin-bottom: 43px;
+}
+
+@media (max-width: 1180px) {
+  .left-conteiner {
+    padding: 0 40px 0 40px;
+  }
+  .all-seasons {
+    grid-template-columns: repeat(auto-fill, 295px);
+  }
+  .season-contain {
+    width: 295px;
+    height: 225px;
+  }
+  .season-contain .season-img {
+    width: 268px;
+    height: 157px;
+    margin: 12px 12px 0 10px;
+  }
+  .season-contain .season-img img {
+    width: 268px;
+    height: 157px;
+  }
+  .season-contain .number-title {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .season-contain .number-text {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .sub-title .sub-title-text {
+    font-size: 20px;
+  }
+  .title-season .season-title-text {
+    font-size: 29px;
+  }
+}
+@media (max-width: 994px) {
+  .left-conteiner {
+    padding: 0 24px 0 24px;
+  }
+}
+@media (max-width: 944px) {
+  .description-title {
+    text-align: center;
+  }
+  .description-title .title-descr {
+    font-size: 25px;
+  }
+  .left-conteiner {
+    padding: 0 24px 0 24px;
+  }
+  .sub-title .sub-title-text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .title-season .season-title-text {
+    font-size: 25px;
+  }
+  .all-season-title {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .left-description {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 710px) {
+  .all-seasons {
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 30px 30px;
+  }
+  .season-contain {
+    width: 250px;
+    height: 200px;
+  }
+  .season-contain .season-img {
+    width: 225px;
+    height: 130px;
+    margin: 10px 10px 0 10px;
+  }
+  .season-contain .season-img img {
+    width: 225px;
+    height: 130px;
+  }
+  .season-contain .season-text {
+    padding: 14px 28px;
+  }
+  .season-contain .number-title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .season-contain .number-text {
+    font-size: 17px;
+    line-height: 23px;
+  }
+  .title-season .season-title-text {
+    font-size: 25px;
+  }
+  .sub-title .sub-title-text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .spnbrc {
+    padding: 0 10px;
+  }
+  .all-season-title {
+    margin-top: 35px;
+  }
+  .left-description {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 570px) {
+  .title-season .season-title-text {
+    font-size: 19px;
+  }
+  .sub-title .sub-title-text {
+    font-size: 13px;
+  }
+}
+@media (max-width: 470px) {
+  .left-conteiner {
+    padding: 0 15px 0 15px;
+  }
+  .all-seasons {
+    margin: 30px auto;
+  }
+  .title-season .season-title-text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .spnbrc {
+    padding: 0;
+  }
+  .sub-title .sub-title-text {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .all-seasons {
+    gap: 30px;
+  }
+  .left-description {
+    margin-top: 24px;
+  }
+  .all-season-title {
+    margin-top: 25px;
+  }
+  .out-line-bottom {
+    margin-bottom: 30px;
+  }
+}
+.main-right-content {
+  background-color: #3F574B;
+  box-shadow: -5px 0px 10px rgba(12, 27, 68, 0.2);
+}
+
+.main-right-content-conteiner {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 23px;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 58px;
+}
+
+.btn-all-seasons {
+  background-color: #4E6E60;
+  border: 1px solid #B4E397;
+  padding: 8px 61px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+  margin-bottom: 20px;
+}
+.btn-all-seasons .btn-link-seasons {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.btn-all-seasons:hover {
+  transition: 0.2s ease;
+  background: #314A3E;
+  border: 1px solid #89CB35;
+  box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+}
+
+.btn-top-serias {
+  background-color: #4E6E60;
+  border: 1px solid #B4E397;
+  padding: 8px 44px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+  margin-bottom: 20px;
+}
+.btn-top-serias .btn-link-serias {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.btn-top-serias:hover {
+  transition: 0.2s ease;
+  background: #314A3E;
+  border: 1px solid #89CB35;
+  box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+}
+
+.btn-all-characters {
+  background-color: #4E6E60;
+  border: 1px solid #B4E397;
+  padding: 9px 58px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+  margin-bottom: 54px;
+}
+.btn-all-characters .btn-link-characters {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.btn-all-characters:hover {
+  transition: 0.2s ease;
+  background: #314A3E;
+  border: 1px solid #89CB35;
+  box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+}
+
+.btn-all-series {
+  background-color: #4E6E60;
+  border: 1px solid #B4E397;
+  padding: 9px 24px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+  margin-bottom: 54px;
+}
+.btn-all-series .btn-link-series {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.btn-all-series:hover {
+  transition: 0.2s ease;
+  background: #314A3E;
+  border: 1px solid #89CB35;
+  box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+}
+
+.random-seria {
+  width: 238px;
+  height: 148px;
+  border-radius: 12px;
+  background-image: url("img/main/randser/bear-rand.jpg");
+  border: 1.5px solid #B4E397;
+  margin-bottom: 104px;
+  box-shadow: 0px 4px 30px rgba(12, 27, 68, 0.25);
+}
+.random-seria .random-seria-link {
+  font-family: "Edirne";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #89CB35;
+}
+.random-seria:hover {
+  transition: 0.8s ease;
+  border: 1.5px solid #89CB35;
+  box-shadow: inset 0px 0px 25px rgba(12, 20, 43, 0.5);
+}
+
+.out-line-random {
+  margin-bottom: 52px;
+}
+.out-line-random .line-sub-rand {
+  width: 200px;
+  height: 2px;
+  background-color: #B4E397;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.all-cartoon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 238px);
+  gap: 23px 0;
+}
+
+.more-cartoon {
+  width: 238px;
+  height: 178px;
+  background-color: #526A5D;
+  border: 1.5px solid #B4E397;
+  border-radius: 12px;
+  filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+}
+
+.cartoon-img {
+  width: 222px;
+  height: 128px;
+  margin: 8px 8px 0 6px;
+}
+.cartoon-img img {
+  width: 222px;
+  height: 128px;
+  border-radius: 6px;
+}
+
+.cartoon-desrc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 15px 12px 15px;
+}
+
+.titlemlt {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.cartoon-text {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.spsimps {
+  color: #FFED4A;
+}
+
+.southpark {
+  color: #FF8031;
+}
+
+.futurama {
+  color: #55D3CC;
+}
+
+.future-news {
+  width: 238px;
+  height: 108px;
+  background-color: #526A5D;
+  border: 1.5px solid #B4E397;
+  border-radius: 12px;
+}
+.future-news .future-text {
+  font-family: "Monserat";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #89CB35;
+  text-align: center;
+  padding-top: 15px;
+}
+
+@media (max-width: 1180px) {
+  .main-right-content-conteiner {
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: center;
+  }
+}
+@media (max-width: 944px) {
+  .main-right-content {
+    display: none;
+  }
+}
+.all-series {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 372px);
+  gap: 47px 47px;
+  margin-top: 42px;
+  justify-content: center;
+  margin-bottom: 97px;
+}
+
+.seria-contain {
+  position: relative;
+  width: 372px;
+  height: 283px;
+  background-color: linear-gradient(288.49deg, rgba(107, 174, 150, 0.1292) -3.9%, rgba(107, 174, 150, 0) 106.23%);
+  filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+  border: 1.5px solid #B4E397;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+}
+.seria-contain:hover {
+  transition: 0.2s ease;
+  background: linear-gradient(356.31deg, rgba(215, 254, 216, 0.2464) -12.49%, rgba(107, 174, 150, 0) 65.89%);
+  border: 1.5px solid #FFFFFF;
+  filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+}
+.seria-contain:hover .seria-img {
+  transition: 0.2s ease;
+  border: 1.5px solid #89CB35;
+  border-radius: 6px;
+  box-shadow: inset 18.4333px -18.4333px 18.4333px rgba(165, 165, 165, 0.044), inset -18.4333px 18.4333px 18.4333px rgba(255, 255, 255, 0.044);
+}
+.seria-contain:hover .seria-img img {
+  transition: 0.2s ease;
+  background: rgba(85, 126, 94, 0.58);
+  filter: blur(10px);
+}
+.seria-contain:hover .hover-text-seria-descr {
+  transition: 0.4s ease;
+  z-index: 3;
+}
+
+.seria-img {
+  position: relative;
+  z-index: 2;
+  width: 346px;
+  height: 204px;
+  margin: 12px 12px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+.seria-img img {
+  border-radius: 5px;
+  width: 346px;
+  height: 204px;
+}
+.seria-img .hover-text-seria-descr {
+  position: absolute;
+  z-index: -2;
+  text-align: justify;
+  padding: 21px 30px 30px 30px;
+}
+.seria-img .hover-text-seria-descr .text-seria-descr {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.seria-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number-text-seria {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #89CB35;
+  padding: 14px 0 14px 0;
+}
+
+.sub-title-descr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 58px;
+  margin-top: 2px;
+}
+
+.left-title-an .title-angl {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.right-title-numb .title-number {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.choice-oz {
+  margin-bottom: 9px;
+}
+.choice-oz .ozvychka {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.08em;
+  color: #89CB35;
+}
+
+.see-video {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.info-left {
+  display: flex;
+}
+.info-left .inf-comments {
+  margin-left: 30px;
+}
+
+.right-info {
+  display: flex;
+}
+.right-info .info-like {
+  margin-right: 30px;
+}
+
+.pkld {
+  display: none;
+}
+
+.nex-past-series {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 82px;
+}
+
+.fl-ser {
+  display: flex;
+}
+
+.poz-right {
+  justify-content: right;
+}
+
+.seria-link-btn {
+  background-color: #374940;
+}
+.seria-link-btn a {
+  display: flex;
+  align-items: center;
+}
+
+.bg-strelka {
+  width: 38px;
+  height: 38px;
+  background-color: #5D6C64;
+  border-radius: 50%;
+}
+.bg-strelka img {
+  margin-top: 10px;
+  margin-right: 4px;
+}
+
+.st-text-str {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.pust-text {
+  margin-left: 25px;
+}
+
+.next-text {
+  margin-right: 25px;
+}
+
+.deg-img {
+  transform: rotate(-180deg);
+}
+
+.seria-link-btn:hover .st-text-str {
+  transition: 0.4s ease;
+  color: #89CB35;
+}
+.seria-link-btn:hover .bg-strelka {
+  transition: 0.4s ease;
+  background: #274335;
+  box-shadow: inset 0px 0px 6px rgba(12, 27, 68, 0.45);
+}
+
+.non-str {
+  display: none;
+}
+
+.description-block-seres {
+  margin-bottom: 110px;
+}
+
+.title-description-ser .title-descr-ser-top {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.sub-title-descr-ser {
+  text-align: justify;
+  margin-top: 15px;
+}
+.sub-title-descr-ser .text-sub-title-ser {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+.comment-text {
+  background: #B4E397;
+  opacity: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 110px;
+}
+.comment-text .text-com {
+  padding: 40px 0;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 55px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.mr {
+  margin-bottom: 35px;
+}
+
+@media (max-width: 1180px) {
+  .all-series {
+    grid-template-columns: repeat(auto-fill, 295px);
+  }
+  .seria-contain {
+    width: 295px;
+    height: 225px;
+  }
+  .seria-contain .seria-img {
+    width: 268px;
+    height: 157px;
+    margin: 12px 12px 0 10px;
+  }
+  .seria-contain .seria-img img {
+    width: 268px;
+    height: 157px;
+  }
+  .seria-contain .seria-img .hover-text-seria-descr {
+    display: none;
+  }
+  .number-text-seria {
+    padding: 10px 0 14px 0;
+  }
+}
+@media (max-width: 944px) {
+  .number-text-seria {
+    font-size: 24px;
+    padding: 11px 0 14px 0;
+  }
+}
+@media (max-width: 710px) {
+  .all-series {
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 30px 30px;
+    margin-bottom: 55px;
+  }
+  .seria-contain {
+    width: 250px;
+    height: 200px;
+  }
+  .seria-contain .seria-img {
+    width: 225px;
+    height: 130px;
+    margin: 10px 10px 0 10px;
+  }
+  .seria-contain .seria-img img {
+    width: 225px;
+    height: 130px;
+  }
+  .number-text-seria {
+    font-size: 20px;
+  }
+}
+@media (max-width: 470px) {
+  .left-conteiner {
+    padding: 0 15px 0 15px;
+  }
+}
+@media (max-width: 944px) {
+  .title-description-ser .title-descr-ser-top {
+    font-size: 25px;
+  }
+  .sub-title-descr-ser .text-sub-title-ser {
+    font-size: 18px;
+  }
+  .st-text-str {
+    font-size: 20px;
+  }
+  .comment-text .text-com {
+    font-size: 45px;
+  }
+  .nex-past-series {
+    margin-bottom: 65px;
+  }
+}
+@media (max-width: 710px) {
+  .bg-strelka {
+    width: 25px;
+    height: 25px;
+  }
+  .bg-strelka img {
+    margin-top: 5px;
+    margin-right: 3px;
+    width: 6px;
+    height: 14px;
+  }
+  .pust-text {
+    margin-left: 10px;
+  }
+  .next-text {
+    margin-right: 10px;
+  }
+  .title-description-ser .title-descr-ser-top {
+    font-size: 21px;
+  }
+  .sub-title-descr-ser .text-sub-title-ser {
+    font-size: 14px;
+  }
+  .comment-text .text-com {
+    padding: 10px 0;
+    font-size: 17px;
+  }
+  .left-title-an .title-angl {
+    font-size: 15px;
+  }
+  .right-title-numb .title-number {
+    font-size: 15px;
+  }
+  .st-text-str {
+    font-size: 18px;
+  }
+}
+@media (max-width: 570px) {
+  .left-title-an .title-angl {
+    font-size: 14px;
+  }
+  .right-title-numb .title-number {
+    font-size: 14px;
+  }
+  .description-title .title-descr {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .choice-oz .ozvychka {
+    font-size: 16px;
+  }
+  .title-description-ser .title-descr-ser-top {
+    font-size: 21px;
+  }
+  .sub-title-descr-ser .text-sub-title-ser {
+    font-size: 14px;
+  }
+  .comment-text .text-com {
+    padding: 10px 0;
+    font-size: 17px;
+  }
+  .description-block-seres {
+    margin-bottom: 60px;
+  }
+  .comment-text {
+    margin-bottom: 60px;
+  }
+  .st-text-str {
+    font-size: 15px;
+  }
+  .sub-title-descr {
+    margin-bottom: 30px;
+  }
+  .nex-past-series {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 470px) {
+  .description-title .title-descr {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .left-title-an .title-angl {
+    font-size: 10px;
+  }
+  .right-title-numb .title-number {
+    font-size: 10px;
+  }
+  .sub-title-descr {
+    margin-bottom: 30px;
+  }
+  .choice-oz .ozvychka {
+    font-size: 9px;
+    line-height: 1px;
+  }
+  .st-text-str {
+    font-size: 10px;
+  }
+  .bg-strelka {
+    width: 15px;
+    height: 15px;
+  }
+  .bg-strelka img {
+    margin: 0;
+    width: 4px;
+    height: 9px;
+  }
+  .content-title .title-link .link-title {
+    font-size: 35px;
+  }
+  .nex-past-series {
+    margin-bottom: 30px;
+  }
+  .title-description-ser .title-descr-ser-top {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .sub-title-descr-ser {
+    margin-top: 8px;
+  }
+  .sub-title-descr-ser .text-sub-title-ser {
+    font-size: 11px;
+    line-height: 24px;
+  }
+  .comment-text .text-com {
+    padding: 0;
+    font-size: 13px;
+  }
+}
+.footer-content {
+  max-width: 1200px;
+  height: 30px;
+  background-color: #274335;
+  margin: 0 auto;
+  box-shadow: inset 0px 0px 6px rgba(12, 27, 68, 0.35);
+  margin-bottom: 30px;
+}
+
+.footer-container {
+  padding: 0 43px;
+}
+
+.footer-container {
+  padding-top: 7px;
+}
+.footer-container .footer-text {
+  font-family: "Poiret One";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+
+@media (max-width: 570px) {
+  .footer-container .footer-text {
+    font-size: 13px;
+  }
+}
+.sor-block .sor-conteiner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sor-block .sor-conteiner .btn-sorry {
+  display: block;
+  margin: 230px auto;
+  font-size: 26px;
+  background: none;
+  color: #B4E397;
+  padding: 30px 15px;
+  border-radius: 20px;
+  border: 2px solid #89CB35;
+}

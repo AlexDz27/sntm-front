@@ -1,9 +1,13 @@
+import Header from './Header'
+import PictureUnderHeader from './PictureUnderHeader'
+
 function App() {
   return (
     <div className="App">
-      qweqwe
+      <Header />
+      <PictureUnderHeader />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

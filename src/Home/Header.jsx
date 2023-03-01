@@ -1,4 +1,4 @@
-import registrationPic from './img/header/registr.svg'
+import registrationPic from '../img/header/registr.svg'
 
 function Header() {
   return (
@@ -40,4 +40,4 @@ function Header() {
   )
 }
 
-export default Header
+export  {Header}

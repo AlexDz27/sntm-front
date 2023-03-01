@@ -1,4 +1,4 @@
-import headerPic from './img/title-img.jpg'
+import headerPic from '../img/title-img.jpg'
 
 function PictureUnderHeader() {
   return (
@@ -10,4 +10,4 @@ function PictureUnderHeader() {
   )
 }
 
-export default PictureUnderHeader
+export {PictureUnderHeader}

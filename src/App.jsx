@@ -8,9 +8,9 @@ import {Footer} from './Home/Footer';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
-import {FirstSez} from './AllSeazons/FirstSez/FirstSeazon';
-import {TwoSeazon} from './AllSeazons/TwoSez/TwoSezCont';
-import {ThreeSeazon} from './AllSeazons/ThreeSez/ThreeSezCont';
+import {FirstSezCont} from './AllSeazons/FirstSez/FirsSezCont';
+import {TwoSezCont} from './AllSeazons/TwoSez/TwoSezCont';
+import {ThreeSezCont} from './AllSeazons/ThreeSez/ThreeSezCont';
 
 
  
@@ -25,12 +25,11 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Main/>} />
-            <Route path="/firstsez" element={<FirstSez/>} />
-            <Route path="/twosez" element={<TwoSeazon/>} />
-            <Route path="/threesez" element={<ThreeSeazon/>} />
+            <Route path="/FirstSezCont" element={<FirstSezCont/>} />
+            <Route path="/TwoSezCont" element={<TwoSezCont/>} />
+            <Route path="/ThreeSezCont" element={<ThreeSezCont/>} />
           </Routes>
-
-        {/* <Main /> */}
+       
         <Footer />
 
       </Router>

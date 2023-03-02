@@ -1,5 +1,8 @@
 import registrationPic from '../img/header/registr.svg'
 
+
+// import { OneS } from "../AllSeazons/ThreeSez/ThreeSeazon";
+
 function Header() {
   return (
     <header className="header">
@@ -20,7 +23,8 @@ function Header() {
                     <div className="content-top"><a href="#" className="top-link">top-10</a></div>
 
                     <div className="content-title">
-                        <a href="./index.html" className="title-link">
+                        {/* <Link to="/OneS">asddsaf</Link> */}
+                        <a href='#' className="title-link">
                             <h1 className="link-title">brickleberry</h1>
                         </a>
                     </div>
@@ -36,7 +40,9 @@ function Header() {
                 </div>
             </div>
         </div>
+        
     </header>
+    
   )
 }
 

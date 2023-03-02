@@ -9,11 +9,11 @@ import {AllSeazons} from './AllSeazons';
 
 
 
-import { Routes, Route, Link } from 'react-router-dom';
-import { Home } from '../../App';
-import { FirstSezz } from '../../AllSeazons/FirstSez/FirstSeazon';
-import { TwoSez } from '../../AllSeazons/TwoSez/TwoSeazon';
-import { ThreeSez } from '../../AllSeazons/ThreeSez/ThreeSeazon';
+// import { Routes, Route, Link } from 'react-router-dom';
+// import { Home } from '../../App';
+// import { FirstSezz } from '../../AllSeazons/FirstSez/FirstSeazon';
+// import { TwoSez } from '../../AllSeazons/TwoSez/TwoSeazon';
+// import { ThreeSez } from '../../AllSeazons/ThreeSez/ThreeSeazon';
 
 
 

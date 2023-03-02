@@ -1,0 +1,19 @@
+
+
+
+.sor-block {
+    .sor-conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+        .btn-sorry {
+            display: block;
+            margin: 230px auto;
+            font-size: 26px;
+            background: none;
+            color: $sub-title-line;
+            padding: 30px 15px;
+            border-radius: 20px;
+            border: 2px solid $color-brickl;
+        }
+    }
+}

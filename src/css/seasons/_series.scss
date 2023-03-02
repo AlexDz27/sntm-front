@@ -1,0 +1,98 @@
+
+
+// Список всех серий
+.all-series {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 372px);
+    // column-gap: 47px;
+    // row-gap: 46px;
+    gap: 47px 47px;
+    margin-top: 42px;
+    justify-content: center;
+    margin-bottom: 97px;
+}
+
+// Блок с номером серии
+.seria-contain {
+    position: relative;
+    width: 372px;
+    height: 283px;
+    background-color:linear-gradient(288.49deg, rgba(107, 174, 150, 0.1292) -3.9%, rgba(107, 174, 150, 0) 106.23%); 
+    filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+    border: 1.5px solid $border-season;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+    &:hover {
+        transition: 0.2s ease;
+        background: linear-gradient(356.31deg, rgba(215, 254, 216, 0.2464) -12.49%, rgba(107, 174, 150, 0) 65.89%);
+        border: 1.5px solid #FFFFFF;
+        filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+        .seria-img {
+            transition: 0.2s ease;
+            border: 1.5px solid #89CB35;
+            border-radius: 6px;
+            box-shadow: inset 18.4333px -18.4333px 18.4333px rgba(165, 165, 165, 0.044), inset -18.4333px 18.4333px 18.4333px rgba(255, 255, 255, 0.044);
+            img{
+                transition: 0.2s ease;
+                background: rgba(85, 126, 94, 0.58);
+                filter: blur(10px);
+            }           
+        }
+        .hover-text-seria-descr {
+            transition: 0.4s ease;
+            z-index: 3;
+        }
+    }
+}
+
+// картинка в блоке выбора серии
+.seria-img {
+    position: relative;
+    z-index: 2;
+    width: 346px;
+    height: 204px;
+    margin: 12px 12px 0 10px;
+    display: flex;
+    justify-content: center; 
+    img {
+        border-radius: 5px;
+        width: 346px;
+        height: 204px;
+    }
+    .hover-text-seria-descr {
+        position: absolute;
+        z-index: -2;
+        text-align: justify;
+        padding: 21px 30px 30px 30px;
+        .text-seria-descr {
+            font-family: 'Poiret One';
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 18px;
+            letter-spacing: 0.08em;
+            color: $color-text-wh;
+        }
+    }
+}
+
+
+
+//Текст под картинкой выбора серии
+.seria-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-text-seria {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $color-brickl;
+    padding: 14px 0 14px 0;
+}

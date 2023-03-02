@@ -1,0 +1,23 @@
+
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poiret One', sans-serif;
+    // background-color: $bg-color;
+    background-image: url('../img/main/bear-bg.jpg');
+    margin: 0;
+}
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Edirne"; 
+    // адрес шрифта и тип 
+    src: url("../fonts/Edirne.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    }
+
+
+

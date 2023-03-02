@@ -1,0 +1,151 @@
+
+
+.main-left-content {
+    // max-width: 902px;
+    width: 100%;
+    background-color: $left-cnt-bg;
+}
+
+.left-conteiner {
+    padding: 0 45px 0 43px;
+}
+
+// Заголовок описания
+.left-description {
+    margin-top: 52px;
+}
+
+.description-title {
+    .title-descr {
+        color: $color-text-wh;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 45px;
+        text-transform: uppercase;       
+    }
+}
+
+// SPAN бриклберри (зелёный)
+.brcklbr {
+    color: $color-brickl;
+}
+.spnbrc {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+// Полоска под заголовком
+.title-line {
+    width: 100%;
+    height: 2px;
+    background-color: $sub-title-line;
+    border-radius: 1px;
+}
+
+// Описание сериала 
+.sub-title {
+    margin-top: 18px;
+    text-align:justify;
+    .sub-title-text {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 30px;
+        letter-spacing: 0.08em;
+        color: $color-text-wh;
+        -webkit-text-stroke: 0.1px #fff;
+    }
+}
+
+
+// Заголовок "Все сезоны Bricklberry"
+.all-season-title {
+    margin-top: 83px;
+}
+
+.title-season {
+    .season-title-text {
+        font-family: 'Montserrat';
+        font-weight: 300;
+        font-size: 37px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: $color-text-wh;
+    }
+}
+
+
+
+// Список всех сезонов
+.all-seasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 372px);
+    // column-gap: 47px;
+    // row-gap: 46px;
+    gap: 50px 50px;
+    margin: 43px auto;
+    justify-content: center;
+    // margin-top: 42px;
+    // margin-left: 11px;
+    margin-bottom: 97px;
+}
+
+// Блок с номером сезона и количеством серий
+.season-contain {
+    width: 372px;
+    height: 283px;
+    background-color:linear-gradient(288.49deg, rgba(107, 174, 150, 0.1292) -3.9%, rgba(107, 174, 150, 0) 106.23%); 
+    filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+    border: 1.5px solid $border-season;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+}
+
+// картинка в блоке выбора сезона
+.season-img {
+    width: 348px;
+    height: 204px;
+    margin: 12px 12px 0 10px;
+    display: flex;
+    justify-content: center; 
+    img {
+        border-radius: 6px;
+        width: 348px;
+        height: 204px;
+    }
+}
+
+//Текст под картинкой выбора сезона
+.season-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 35px;
+}
+
+.number-title {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $color-brickl;
+}
+
+.number-text {
+    font-family: 'Poiret One';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.08em;
+    color: $color-text-wh;
+}
+
+// Нижняя полоска под сезонами и сериями
+.out-line-bottom {
+    margin-bottom: 43px;
+}

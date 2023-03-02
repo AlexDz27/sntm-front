@@ -1,0 +1,213 @@
+
+
+// серия на англ и номер сериии
+
+.sub-title-descr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 58px;
+    margin-top: 2px;
+}
+
+.left-title-an {
+    .title-angl {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 20px;
+        // line-height: 32px;
+        letter-spacing: 0.08em;
+        color: $color-text-wh;
+    }
+}
+
+.right-title-numb {
+    .title-number {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 20px;
+        // line-height: 32px;
+        letter-spacing: 0.08em;
+        color: $color-text-wh;
+    }
+}
+
+// Выбор озвучка
+.choice-oz {
+    margin-bottom: 9px;
+    .ozvychka {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.08em;
+        color: $hover-border;
+    }
+}
+
+// Плеер
+.see-video {
+    // max-width: 815px;
+    width: 100%;
+    // height: 392px;
+    margin-bottom: 10px;
+}
+
+// Просмотры,комментарии,лайк,дизлайк
+
+
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.info-left {
+    display: flex;
+    .inf-comments {
+        margin-left: 30px;
+    }
+}
+
+.right-info {
+    display: flex;
+    .info-like {
+        margin-right: 30px;
+    }
+}
+// displey none 
+.pkld{display: none;}
+
+
+// Следующая и предыдущая серия
+.nex-past-series {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 82px;
+}
+
+.fl-ser {
+    display: flex;
+}
+.poz-right {
+    justify-content:right;
+}
+
+.seria-link-btn {
+    background-color: $left-cnt-bg;
+    a {
+        display: flex;
+        align-items: center;
+        
+    }
+}
+
+.bg-strelka {
+    width: 38px;
+    height: 38px;
+    background-color: $bg-str-button;
+    border-radius: 50%;
+    img{
+        margin-top: 10px;
+        margin-right: 4px;
+    }
+}
+
+.st-text-str {
+    font-family: 'Poiret One';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.08em;
+    color: $color-text-wh;
+}
+
+.pust-text {
+    margin-left: 25px;
+}
+
+.next-text {
+    margin-right: 25px;
+}
+
+.deg-img{transform: rotate(-180deg);}
+
+.seria-link-btn {
+    &:hover{
+        
+        .st-text-str {
+            transition: 0.4s ease;
+            color: #89CB35;
+        }
+        .bg-strelka {
+            transition: 0.4s ease;
+            background: #274335;
+            box-shadow: inset 0px 0px 6px rgba(12, 27, 68, 0.45);
+        }
+    }
+}
+
+.non-str {display: none;}
+
+
+// Что будет в серии
+.description-block-seres {
+    margin-bottom: 110px;
+}
+
+.title-description-ser {
+    // margin-bottom: 2px;
+    .title-descr-ser-top {
+        font-family: 'Montserrat';
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 45px;
+        text-transform: uppercase;
+        color: $color-text-wh;
+    }
+}
+
+.sub-title-descr-ser {
+    text-align: justify;
+    margin-top: 15px;
+    .text-sub-title-ser {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0.08em;
+        color: $color-text-wh;
+    }
+}
+
+// Комментарии к серии
+.comment-text {
+    // max-width: 794px;
+    // height: 231px;
+    background: #B4E397;
+    opacity: 0.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
+    .text-com {
+        padding: 40px 0;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        font-size: 55px;
+        line-height: 60px;
+        // letter-spacing: 0.25em;
+        text-transform: uppercase;
+        // color: rgba(255, 255, 255, 0.5);
+    }
+}
+.mr {
+    margin-bottom: 35px;
+}
+
+
+
+

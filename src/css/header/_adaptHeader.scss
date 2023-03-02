@@ -1,0 +1,54 @@
+
+
+
+
+@media (max-width: 944px) {
+    .header-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 80;
+    }
+
+    .header-container {
+        padding: 0 24px;
+    }
+
+    .content-top{
+        display: none;
+        .top-link {
+            display: none;
+        }
+    } 
+
+    .content-reg {
+        display: none;
+    }
+
+    .header-block {
+        justify-content: center;
+    }
+
+    .content-title {
+        .title-link {
+            .link-title {
+                font-size: 50px;
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+
+}
+
+
+@media (max-width: 470px) {
+    .content-title {
+        .title-link {
+            .link-title {
+                font-size: 45px;
+            }
+        }
+    }
+}

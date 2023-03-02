@@ -1,0 +1,26 @@
+
+
+
+.img-title-content {
+    max-width: 1200px;
+    // height: 270px;
+    display: flex;
+    margin: 0 auto;
+    img {
+        height: auto;
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 944px) {
+    .img-title-content {
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 470px) {
+    .img-title-content {
+        margin-top: 47px;
+    }
+}

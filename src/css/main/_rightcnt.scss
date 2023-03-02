@@ -1,0 +1,245 @@
+
+
+.main-right-content {
+    background-color: $right-cnt-bg;
+    box-shadow: -5px 0px 10px rgba(12, 27, 68, 0.2);
+    // width: 100%;
+}
+
+.main-right-content-conteiner {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 23px;
+}
+
+
+// Правое верхнее меню с кнопками
+.button-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 58px;
+    // .button-list-center {
+    //     // display: flex;
+    //     justify-content: center;
+    // }
+}
+
+// Кнопка все сезоны
+.btn-all-seasons {
+    background-color: $bg-button;
+    border: 1px solid $sub-title-line;
+    padding: 8px 61px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+    margin-bottom: 20px;
+    .btn-link-seasons {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.05em;     
+        color: $color-text-wh;
+    }
+    &:hover{
+        transition: 0.2s ease;
+        background: #314A3E;
+        border: 1px solid $hover-border;
+        box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+    }
+}
+
+// Кнопка TOP-10 серий
+.btn-top-serias {
+    background-color: $bg-button;
+    border: 1px solid $sub-title-line;
+    padding: 8px 44px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+    margin-bottom: 20px;
+    .btn-link-serias {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.05em;     
+        color: $color-text-wh;
+    }
+    &:hover{
+        transition: 0.2s ease;
+        background: #314A3E;
+        border: 1px solid $hover-border;
+        box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+    }
+}
+
+// Кнопка Персонажи
+.btn-all-characters {
+    background-color: $bg-button;
+    border: 1px solid $sub-title-line;
+    padding: 9px 58px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+    margin-bottom: 54px;
+    .btn-link-characters {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.05em;     
+        color: $color-text-wh;
+    }
+    &:hover{
+        transition: 0.2s ease;
+        background: #314A3E;
+        border: 1px solid $hover-border;
+        box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+    }
+}
+
+//Все серии сезона
+.btn-all-series {
+    background-color: $bg-button;
+    border: 1px solid $sub-title-line;
+    padding: 9px 24px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(12, 27, 68, 0.25);
+    margin-bottom: 54px;
+    .btn-link-series {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.05em;     
+        color: $color-text-wh;
+    }
+    &:hover{
+        transition: 0.2s ease;
+        background: #314A3E;
+        border: 1px solid $hover-border;
+        box-shadow: inset 2px 2px 10px rgba(12, 27, 68, 0.55);
+    }
+}
+
+
+// Случайная серия
+.random-seria {
+    width: 238px;
+    height: 148px;
+    border-radius: 12px;
+    // background-color: $bg-random-seria;
+    background-image: url('../../img/main/randser/bear-rand.jpg');
+    border: 1.5px solid $sub-title-line;
+    margin-bottom: 104px;
+    box-shadow: 0px 4px 30px rgba(12, 27, 68, 0.25); 
+    .random-seria-link {
+        font-family: 'Edirne';
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: $color-brickl;
+    }
+    &:hover{
+        transition: 0.8s ease;
+        // background: #314A3E;
+        // background-image: url('/SNTM/img/main/bear-bg.jpg');
+        border: 1.5px solid $hover-border;
+        box-shadow: inset 0px 0px 25px rgba(12, 20, 43, 0.5);
+    }
+}
+
+
+// Полоска под случайной серией
+.out-line-random {
+    margin-bottom: 52px;
+    .line-sub-rand {
+        width: 200px;
+        height: 2px;
+        background-color: $sub-title-line;
+        border-radius: 1px;
+        margin: 0 auto;
+    }
+}
+
+
+// Блок с другими мультиками
+.all-cartoon {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 238px);
+    gap: 23px 0;
+}
+
+.more-cartoon {
+    width: 238px;
+    height: 178px;
+    background-color: $bg-more-cartoon;
+    border: 1.5px solid $sub-title-line;
+    border-radius: 12px;
+    filter: drop-shadow(0px 4px 30px rgba(12, 27, 68, 0.25));
+} 
+
+.cartoon-img {
+    width: 222px;
+    height: 128px;
+    margin: 8px 8px 0 6px;
+    img {
+        width: 222px;
+        height: 128px;
+        border-radius: 6px;
+    }
+}
+
+.cartoon-desrc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 15px 12px 15px;
+}
+
+.titlemlt {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.cartoon-text {
+    font-family: 'Poiret One';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: $color-text-wh;
+}
+
+.spsimps {color:$simpsons-color;}
+.southpark {color:$south-park-color;}
+.futurama {color:$futurama-color;}
+
+
+// Cкоро выйдут новые мультики
+.future-news {
+    width: 238px;
+    height: 108px;
+    background-color: $bg-more-cartoon;
+    border: 1.5px solid $sub-title-line;
+    border-radius: 12px;
+    .future-text {
+        font-family: 'Monserat';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: $color-brickl;
+        text-align: center;
+        padding-top: 15px;
+    }
+}
+
+
+
+
+

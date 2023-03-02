@@ -1,0 +1,37 @@
+// Все цвета сайта
+@import './color';
+
+// Тело и сбросы стилей
+@import './body';
+@import './reset';
+
+// Шапка сайта
+@import './header/header';
+@import './header/adaptHeader';
+@import './header/burgerMenu';
+
+// главная картинка
+@import './header/imgtile';
+
+
+// Основной контент сайта
+@import './main/main';
+@import './main/leftcnt';
+@import './main/adaptivleftcontent';
+// @import '/SNTM/css/main/adaptivleftcontent';
+@import './main/rightcnt';
+@import './main/adaptiverightcontent';
+
+// Стили для серий 
+@import './seasons/series';
+@import './seasons/contentserie';
+@import './seasons/adaptiveseri';
+@import './seasons/adaptivecontentseria';
+
+// Footer сайта
+@import './footer/footer';
+@import './footer/adaptfooter';
+
+
+// Sorry
+@import './sorry/sorry';

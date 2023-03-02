@@ -1,0 +1,26 @@
+
+
+.footer-content {
+    max-width: 1200px;
+    height: 30px;
+    background-color: $header-bg;
+    margin: 0 auto;
+    box-shadow: inset 0px 0px 6px rgba(12, 27, 68, 0.35);
+    margin-bottom: 30px;
+}
+
+.footer-container {
+    padding: 0 43px;
+}
+
+.footer-container {
+    padding-top: 7px;
+    .footer-text {
+        font-family: 'Poiret One';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.08em;
+        color: $color-text-wh;
+    }
+}

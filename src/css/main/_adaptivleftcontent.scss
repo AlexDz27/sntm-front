@@ -1,0 +1,213 @@
+
+
+@media (max-width: 1180px) {
+    .left-conteiner {
+        padding: 0 40px 0 40px;
+    }
+    .all-seasons {
+        grid-template-columns: repeat(auto-fill, 295px);
+    }
+
+    .season-contain {
+        width: 295px;
+        height: 225px;
+        .season-img {
+            width: 268px;
+            height: 157px;
+            margin: 12px 12px 0 10px; 
+            img {
+                width: 268px;
+                height: 157px;
+            }
+        }
+        .number-title {
+            font-size: 23px;
+            line-height: 28px;
+        }
+        .number-text {
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+
+    .sub-title {
+        .sub-title-text {
+            font-size: 20px;
+        }
+    }
+
+    .title-season {
+        .season-title-text {
+            font-size: 29px;
+        }
+    }
+}
+
+
+
+@media (max-width: 994px) {
+
+    .left-conteiner {
+        padding: 0 24px 0 24px;
+    }
+}
+
+@media (max-width: 944px) {
+    .description-title{
+        text-align: center;
+        .title-descr {
+            font-size: 25px;
+        }
+    }
+
+    .left-conteiner {
+        padding: 0 24px 0 24px;
+    }
+
+    .sub-title {
+        .sub-title-text {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    .title-season {
+        .season-title-text {
+            font-size: 25px;
+        }
+    }
+
+    .all-season-title {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .left-description {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 710px) {
+    // .left-conteiner {
+    //     padding: 0 24px 0 24px;
+    // }
+
+    .all-seasons {
+        grid-template-columns: repeat(auto-fill, 250px);
+        gap: 30px 30px;
+    }
+    .season-contain {
+        width: 250px;
+        height: 200px;
+        .season-img {
+            width: 225px;
+            height: 130px;
+            margin: 10px 10px 0 10px; 
+            img {
+                width: 225px;
+                height: 130px;
+            }
+        }
+        .season-text {
+            padding: 14px 28px;
+        }
+        .number-title {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        .number-text {
+            font-size: 17px;
+            line-height: 23px;
+        }
+    }
+
+    .title-season {
+        .season-title-text {
+            font-size: 25px;
+        }
+    }
+
+    .sub-title {
+        .sub-title-text {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    .spnbrc {
+        padding: 0 10px;
+    }
+
+    .all-season-title {
+        margin-top: 35px;
+    }
+
+    .left-description {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 570px) {
+    .title-season {
+        .season-title-text {
+            font-size: 19px;
+        }
+    }
+
+    .sub-title {
+        .sub-title-text {
+            font-size: 13px;
+            // line-height: 20px;
+        }
+    }
+
+
+}
+
+
+@media (max-width: 470px) {
+    .left-conteiner {
+        padding: 0 15px 0 15px;
+    }
+
+    .all-seasons {
+        margin: 30px auto;
+    }
+
+    .title-season {
+        .season-title-text {
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+
+    .spnbrc {
+        padding: 0;
+    } 
+
+
+    .sub-title {
+        .sub-title-text {
+            font-size: 10px;
+            line-height: 18px;
+        }
+    }
+
+    .all-seasons {
+        gap: 30px;
+    }
+
+    .left-description {
+        margin-top: 24px;
+    }
+
+    .all-season-title {
+        margin-top: 25px;
+    }
+
+    .out-line-bottom {
+        margin-bottom: 30px;
+    }
+    
+}

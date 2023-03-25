@@ -1,6 +1,5 @@
 import { useRouteError } from 'react-router-dom'
 
-// TODO: more stylish: const for color
 export default function ErrorPage() {
   const error = useRouteError()
   console.error(error)

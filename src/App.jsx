@@ -2,7 +2,7 @@ import { Home } from "./Home"
 
 function App() {
   return (
-    <div id="app">
+    <div className="app" id="app">
       <Home />
     </div>
   )

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import season3 from './img/seasons/3season/threeseasonnumber.png'
 import season2 from './img/seasons/2season/twoseasonnumber.png'
 import season1 from './img/seasons/1season/oneseasonnumber.png'
@@ -58,7 +59,7 @@ function SectionAllSeasons() {
             <div className="all-seasons">
               {/* Сезон 3 */}
               <div className="season-contain">
-                <a href="./season3/sezon3.html">
+                <Link to="/season-3">
                   <div className="season-img">
                     <img src={season3} alt="" />
                   </div>
@@ -70,13 +71,13 @@ function SectionAllSeasons() {
                       <p className="number-text">13 серий</p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               {/* //Сезон 3 */}
 
               {/* Сезон 2 */}
               <div className="season-contain">
-                <a href="./season2/sezon2.html">
+                <Link to="/season-2">
                   <div className="season-img">
                     <img src={season2} alt="" />
                   </div>
@@ -88,13 +89,13 @@ function SectionAllSeasons() {
                       <p className="number-text">13 серий</p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               {/* //Сезон 2 */}
 
               {/* Сезон 1 */}
               <div className="season-contain">
-                <a href="./season1/sezon1.html">
+                <Link to="/season-1">
                   <div className="season-img">
                     <img src={season1} alt="" />
                   </div>
@@ -106,7 +107,7 @@ function SectionAllSeasons() {
                       <p className="number-text">10 серий</p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               {/* //Сезон 1 */}
             </div>

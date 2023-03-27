@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import registrationPic from './img/header/registr.svg'
 import titleImg from './img/title-img.jpg'
 import futuramaPic from './img/cartoon/futurama.png'
@@ -15,25 +15,28 @@ function Home() {
               {/* block nav */}
               <nav className="navbar-none">
                 <ul className="nav-style">
-                  <li className="menu-li"><a href="/SNTM/sorry.html" className="links-menu">Регистрация</a></li>
-                  <li className="menu-li"><a href="/SNTM/index.html" className="links-menu">Все сезоны</a></li>
-                  <li className="menu-li"><a href="/SNTM/sorry.html" className="links-menu">ТОП-10 серий</a></li>
-                  <li className="menu-li"><p className="links-menu" id="randseria">Случайная серия</p></li>
-                  <li className="menu-li"><a href="/SNTM/sorry.html" className="links-menu">Персонажи</a></li>
-                  <li className="menu-li"><a href="/SNTM/sorry.html" className="links-menu">Все мультсериалы</a></li>
+                  {/* TODO: proper links for this mobile menu */}
+                  <li className="menu-li"><Link to="/todo" className="links-menu">Регистрация</Link></li>
+                  <li className="menu-li"><Link to="/todo" className="links-menu">Все сезоны</Link></li>
+                  <li className="menu-li"><Link to="/todo" className="links-menu">ТОП-10 серий</Link></li>
+                  <li className="menu-li"><Link to="/todo" className="links-menu">Случайная серия</Link></li>
+                  <li className="menu-li"><Link to="/todo" className="links-menu">Персонажи</Link></li>
+                  <li className="menu-li"><Link to="/todo" className="links-menu">Все мультсериалы</Link></li>
                 </ul>
               </nav>
               {/* //block nav */}
 
               {/* ТОП 10 серий */}
-              <div className="content-top"><a href="#" className="top-link">top-10</a></div>
+              <div className="content-top">
+                <Link to="/top-10" className="top-link">top-10</Link>
+              </div>
               {/* //ТОП 10 серий */}
 
               {/* Заголовок сайта */}
               <div className="content-title">
-                <a href="./index.html" className="title-link">
+                <Link to="/" className="title-link">
                   <h1 className="link-title">brickleberry</h1>
-                </a>
+                </Link>
               </div>
               {/* //Заголовок сайта */}
 
@@ -74,28 +77,31 @@ function Home() {
               {/* Правое верхнее меню */}
               <div className="button-list">
                 {/* <div className="button-list-center"> */}
-                  <a href="./index.html">
+                  <Link to="/">
                     <button className="btn-all-seasons">
                       <p className="btn-link-seasons">Все сезоны</p>
                     </button>
-                  </a>
+                  </Link>
 
-                  <a href="#">
+                  {/* TODO: proper links here */}
+                  <Link to="/todo">
                     <button className="btn-top-serias">
                       <p className="btn-link-serias">TOP-10 серий</p>
                     </button>
-                  </a>
+                  </Link>
 
-                  <a href="#">
+                  <Link to="/todo">
                     <button className="btn-all-characters">
                       <p className="btn-link-characters">Персонажи</p>
                     </button>
-                  </a>
+                  </Link>
 
 
-                  <button className="random-seria">
-                    <p className="random-seria-link">случайная серия</p>
-                  </button>
+                  <Link to="/todo">
+                    <button className="random-seria">
+                      <p className="random-seria-link">случайная серия</p>
+                    </button>
+                  </Link>
                   {/* </div> */}
 
               </div>
@@ -114,9 +120,10 @@ function Home() {
                   <h2 className="future-text">Скоро выйдут новые мультики</h2>
                 </div>
 
+                {/* TODO: proper links for other films */}
                 {/* Симпсоны */}
                 <div className="more-cartoon">
-                  <a href="#">
+                  <a href="http://google.com">
                     <div className="cartoon-img">
                       <img src={simpsPic} alt="simpsons" />
                     </div>
@@ -134,7 +141,7 @@ function Home() {
 
                 {/* south park */}
                 <div className="more-cartoon">
-                  <a href="#">
+                  <a href="http://google.com">
                     <div className="cartoon-img">
                       <img src={southparkPic} alt="south park" />
                     </div>
@@ -152,7 +159,7 @@ function Home() {
 
                 {/* Futurama */}
                 <div className="more-cartoon">
-                  <a href="#">
+                  <a href="http://google.com">
                     <div className="cartoon-img">
                       <img src={futuramaPic} alt="" />
                     </div>

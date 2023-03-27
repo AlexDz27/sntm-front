@@ -6,6 +6,8 @@ import { App } from './App'
 import ErrorPage from './ErrorPage'
 import Contact from './Contact'
 import { SectionAllSeasons } from './SectionAllSeasons'
+import { Season1 } from './Seasons/Season1'
+import { Season1Episode1 } from './Season1Episode1'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />
+      },
+      {
+        path: '/season-1',
+        element: <Season1 />
+      },
+      {
+        path: '/season-1/episode-1',
+        element: <Season1Episode1 />
       }
     ]
   }

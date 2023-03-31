@@ -1,10 +1,10 @@
 // TODO: implement dynamic routing? via for loop or t
 import { Link } from 'react-router-dom'
 // TODO: make it via loader of React Router
-import episodes from '../jsonStorage/season1episodes.json'
+import episodes from '../jsonStorage/season2episodes.json'
 import texts from '../jsonStorage/texts.json'
 
-function Season1() {
+function Season2() {
   return (
     <>
       {/* Основная левая часть контента */}
@@ -38,7 +38,7 @@ function Season1() {
           <div className="all-season-title">
             <div className="title-season">
               <h2 className="season-title-text">
-                все серии 1 сезона
+                все серии 2 сезона
                 <span className="brcklbr spnbrc">brickleberry</span>
               </h2>
             </div>
@@ -47,13 +47,13 @@ function Season1() {
             {/* Список серий */}
             <div className="all-series">
               {episodes.map(({ episode, img, thumbnailDescription }) => {
-                const imgPath = require(`../img/seasons/1season/${img}`)
+                const imgPath = require(`../img/seasons/2season/${img}`)
 
                 return (
                   <div key={episode} className="seria-contain">
                     <Link to={`episode-${episode}`}>
                       <div className="seria-img">
-                        <img src={imgPath} alt={`${episode} серий 1 сезона`} />
+                        <img src={imgPath} alt={`${episode} серий 2 сезона`} />
                         <div className="hover-text-seria-descr">
                           <p className="text-seria-descr">
                             {thumbnailDescription}
@@ -86,4 +86,4 @@ function Season1() {
   )
 }
 
-export { Season1 }
+export { Season2 }

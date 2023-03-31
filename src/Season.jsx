@@ -1,10 +1,10 @@
 // TODO: implement dynamic routing? via for loop or t
 import { Link } from 'react-router-dom'
 // TODO: make it via loader of React Router
-import episodes from '../jsonStorage/season1episodes.json'
-import texts from '../jsonStorage/texts.json'
+// TODO: import episodes from './jsonStorage/season1episodes.json'
+import texts from './jsonStorage/texts.json'
 
-function Season1() {
+function Season({ seasonNumber }) {
   return (
     <>
       {/* Основная левая часть контента */}
@@ -86,4 +86,4 @@ function Season1() {
   )
 }
 
-export { Season1 }
+export { Season }

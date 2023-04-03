@@ -1,8 +1,16 @@
-import { Link } from 'react-router-dom'
-// TODO: make it via loader of React Router
+import { Link, useLoaderData } from 'react-router-dom'
+import { getEpisodes } from './functions'
 import texts from './jsonStorage/texts.json'
 
-function Season({ number, episodes }) {
+export function loader({ params }) {
+  const episodes = getEpisodes(params.seasonNumber)
+  
+  return {number: params.seasonNumber, episodes}
+}
+
+function Season() {
+  const { number, episodes } = useLoaderData()
+
   return (
     <>
       {/* Основная левая часть контента */}

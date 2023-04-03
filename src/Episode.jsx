@@ -4,8 +4,8 @@ import poster from './img/seasons/1season/s01s01.png'
 import strelka from './img/seasons/player/strelka.svg'
 // TODO: import video from './...' and ability to click prev/next episode buttons
 
-export function loader({ params }) {
-  const { seasonNumber, episodeNumber } = params
+export function loader({ params: { seasonNumber, episodeNumber } }) {
+  // const { seasonNumber, episodeNumber } = params
   const episode = getEpisode(seasonNumber, episodeNumber)
   
   return {episode, seasonNumber}

@@ -2,10 +2,10 @@ import { Link, useLoaderData } from 'react-router-dom'
 import { getEpisodes } from './functions'
 import texts from './jsonStorage/texts.json'
 
-export function loader({ params }) {
-  const episodes = getEpisodes(params.seasonNumber)
+export function loader({ params: { seasonNumber } }) {
+  const episodes = getEpisodes(seasonNumber)
   
-  return {number: params.seasonNumber, episodes}
+  return {number: seasonNumber, episodes}
 }
 
 function Season() {

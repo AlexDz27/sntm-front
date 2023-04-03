@@ -2,7 +2,7 @@ import { useLoaderData } from 'react-router-dom'
 import { getEpisode } from './functions'
 import poster from './img/seasons/1season/s01s01.png'
 import strelka from './img/seasons/player/strelka.svg'
-// TODO: import video from './...'
+// TODO: import video from './...' and ability to click prev/next episode buttons
 
 export function loader({ params }) {
   const { seasonNumber, episodeNumber } = params
@@ -14,9 +14,7 @@ export function loader({ params }) {
 function Episode() {
   const { episode, seasonNumber } = useLoaderData()
 
-  // TODO: const ...
-
-
+  const { hasPrevEpisode, hasNextEpisode } = episode.rendering
   return (
     <>
       {/* Основная левая часть контента */}
@@ -74,7 +72,7 @@ function Episode() {
 
             {/* Следующая и предыдущая серия */}
             <div className="nex-past-series">
-              {false && 
+              {hasPrevEpisode && 
                 <div className="past-seria fl-ser">
                   <button className="seria-link-btn">
                     <a href="#">
@@ -89,18 +87,20 @@ function Episode() {
                 </div>
               }
               
-              <div className="next-seria fl-ser">
-                <button className="seria-link-btn">
-                  <a href="#">
-                  <div className="next-text">
-                    <h3 className="next-text-strelka st-text-str">Следующая серия</h3>
-                  </div>
-                  <div className="bg-strelka deg-img">
-                    <img src={strelka} alt="стрелка предыдущей серии" />
-                  </div>
-                  </a>
-                </button>
-              </div>
+              {hasNextEpisode && 
+                <div className="next-seria fl-ser">
+                  <button className="seria-link-btn">
+                    <a href="#">
+                    <div className="next-text">
+                      <h3 className="next-text-strelka st-text-str">Следующая серия</h3>
+                    </div>
+                    <div className="bg-strelka deg-img">
+                      <img src={strelka} alt="стрелка предыдущей серии" />
+                    </div>
+                    </a>
+                  </button>
+                </div>
+              }
             </div>
             {/* //Следующая и предыдущая серия */}
           

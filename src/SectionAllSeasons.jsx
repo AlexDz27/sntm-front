@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import texts from './jsonStorage/texts.json'
+import allSeasons from './jsonStorage/allSeasonsRenderingData.json'
 
 function SectionAllSeasons() {
   return (
@@ -41,26 +42,22 @@ function SectionAllSeasons() {
 
             {/* Список сезонов */}
             <div className="all-seasons">
-              {[
-                [1, 10],
-                [2, 13],
-                [3, 13],
-              ].map(([seasonNumber, totalEpisodesCount]) => {
-                const imgPath = require(`./img/seasons/${seasonNumber}season/season.png`)
+              {allSeasons.map(({ number, episodesCount }) => {
+                const thumbnail = require(`./img/seasons/${number}season/season.png`)
 
                 return (
-                  <div key={seasonNumber} className="season-contain">
-                    <Link to={`/season-${seasonNumber}`}>
+                  <div key={number} className="season-contain">
+                    <Link to={`/season/${number}`}>
                       <div className="season-img">
-                        <img src={imgPath} alt="" />
+                        <img src={thumbnail} alt="" />
                       </div>
                       <div className="season-text">
                         <div className="number-season">
-                          <h3 className="number-title">Сезон {seasonNumber}</h3>
+                          <h3 className="number-title">Сезон {number}</h3>
                         </div>
                         <div className="number-seria">
                           <p className="number-text">
-                            {totalEpisodesCount} серий
+                            {episodesCount} серий
                           </p>
                         </div>
                       </div>

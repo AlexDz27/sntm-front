@@ -57,7 +57,7 @@ function Season() {
 
                 return (
                   <div key={episode} className="seria-contain">
-                    <Link to={`episode-${episode}`}>
+                    <Link to={`episode/${episode}`}>
                       <div className="seria-img">
                         <img src={imgPath} alt={`${episode} серий ${number} сезона`} />
                         <div className="hover-text-seria-descr">

@@ -1,8 +1,22 @@
+import { useLoaderData } from 'react-router-dom'
+import { getEpisode } from './functions'
 import poster from './img/seasons/1season/s01s01.png'
 import strelka from './img/seasons/player/strelka.svg'
 // TODO: import video from './...'
 
+export function loader({ params }) {
+  const { seasonNumber, episodeNumber } = params
+  const episode = getEpisode(seasonNumber, episodeNumber)
+  
+  return {episode, seasonNumber}
+}
+
 function Episode() {
+  const { episode, seasonNumber } = useLoaderData()
+
+  // TODO: const ...
+
+
   return (
     <>
       {/* Основная левая часть контента */}
@@ -12,7 +26,7 @@ function Episode() {
           <section className="left-description">
             {/* Заголовок серии */}
             <div className="description-title">
-              <h2 className="title-descr"><span className="brcklbr">Заголовок серии!</span></h2>
+              <h2 className="title-descr"><span className="brcklbr">{episode.title}</span></h2>
             </div>
             {/* //Заголовок серии */}
 
@@ -23,17 +37,17 @@ function Episode() {
             {/* Описание на анг и номер серии */}
             <div className="sub-title-descr">
               <div className="left-title-an">
-                <h2 className="title-angl">Welcome to Brickleberry</h2>
+                <h2 className="title-angl">{episode.titleEng}</h2>
               </div>
               <div className="right-title-numb">
-                <h2 className="title-number">1 серия 1 сезон</h2>
+                <h2 className="title-number">{episode.episode} серия {seasonNumber} сезон</h2>
               </div>
             </div>
             {/* //Описание на анг и номер серии */}
 
             {/* Выбор озвучки */}
             <div className="choice-oz">
-              <h3 className="ozvychka">NewStudio</h3>
+              <h3 className="ozvychka">{episode.voiceover}</h3>
             </div>
             {/* //Выбор озвучки */}
 
@@ -59,23 +73,25 @@ function Episode() {
             {/* //Просмотры,комментарии,лайк,дизлайк */}
 
             {/* Следующая и предыдущая серия */}
-            <div className="nex-past-series poz-right">
-              <div className="past-seria fl-ser non-str">
+            <div className="nex-past-series">
+              {false && 
+                <div className="past-seria fl-ser">
+                  <button className="seria-link-btn">
+                    <a href="#">
+                    <div className="bg-strelka">
+                      <img src={strelka} alt="стрелка предыдущей серии" />
+                    </div>
+                    <div className="pust-text">
+                      <h3 className="pust-text-strelka st-text-str">Предыдущая серия</h3>
+                    </div>
+                    </a>
+                  </button>
+                </div>
+              }
+              
+              <div className="next-seria fl-ser">
                 <button className="seria-link-btn">
                   <a href="#">
-                  <div className="bg-strelka">
-                    <img src={strelka} alt="стрелка предыдущей серии" />
-                  </div>
-                  <div className="pust-text">
-                    <h3 className="pust-text-strelka st-text-str">Предыдущая серия</h3>
-                  </div>
-                  </a>
-                </button>
-              </div>
-              
-              <div className="next-seria fl-ser ">
-                <button className="seria-link-btn">
-                  <a href="./s01s02.html">
                   <div className="next-text">
                     <h3 className="next-text-strelka st-text-str">Следующая серия</h3>
                   </div>
@@ -97,7 +113,7 @@ function Episode() {
               </div>
               <div className="title-line"></div>
               <div className="sub-title-descr-ser">
-                <p className="text-sub-title-ser">Тупоголовый Стив боится, что Этель заберёт его никому не нужную награду «Рейнджер месяца», и неудачно пытается подставить её. Тем временем, любовь Маллоя к сладостям приводит его через долгий путь к БДСМ педофилу.</p>
+                <p className="text-sub-title-ser">{episode.description}</p>
               </div>
             </div>
             {/* //Описание что будет в серии */}

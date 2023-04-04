@@ -23,3 +23,8 @@ export function getEpisode(seasonNumber, episodeNumber) {
     throw new Error('Такого сезона или такой серии ещё не выпустили либо их пока нет на нашем сайте')
   }
 }
+
+export function isPasswordStrong(password) {
+  const regexp = /^(?=.*\d)(?=.*[+!@#$%^&*_-])(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+  return regexp.test(password)
+}

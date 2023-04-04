@@ -1,0 +1,19 @@
+.hidden {
+  visibility: hidden;
+}
+
+.mb-small {
+  margin-bottom: 13px;
+}
+
+.bad-input {
+  border: 2px solid red;
+}
+
+.format-error {
+  font-size: 58%;
+  color: red;
+  text-align: left;
+  position: relative;
+  top: 3px;
+}

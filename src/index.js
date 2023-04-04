@@ -8,6 +8,8 @@ import Contact from './Contact'
 import { SectionAllSeasons } from './SectionAllSeasons'
 import { Season, loader as episodesLoader } from './Season'
 import { Episode, loader as singleEpisodeLoader } from './Episode'
+import { Register } from './Register'
+import { Login } from './Login'
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,17 @@ const router = createBrowserRouter([
         loader: singleEpisodeLoader
       }
     ]
-  }
+  },
+  {
+    path: '/register',
+    element: <Register />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/login',
+    element: <Login />,
+    errorElement: <ErrorPage />
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

@@ -41,7 +41,7 @@ function Home() {
               {/* //Заголовок сайта */}
 
               {/* Регистрация */}
-              <div className="content-reg"><img src={registrationPic} alt="Регистрация" className="header-reg" /></div>
+              <Link to="/register"><div className="content-reg"><img src={registrationPic} alt="Регистрация" className="header-reg" /></div></Link>
               {/* //Регистрация */}
 
               {/* Навигация для моб версии */}

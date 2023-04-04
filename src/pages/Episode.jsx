@@ -1,7 +1,7 @@
 import { useLoaderData } from 'react-router-dom'
-import { getEpisode } from './functions'
-import poster from './img/seasons/1season/s01s01.png'
-import strelka from './img/seasons/player/strelka.svg'
+import { getEpisode } from '../functions'
+import poster from '../img/seasons/1season/s01s01.png'
+import strelka from '../img/seasons/player/strelka.svg'
 // TODO: import video from './...' and ability to click prev/next episode buttons
 
 export function loader({ params: { seasonNumber, episodeNumber } }) {

@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
-import { getEpisodes } from './functions'
-import texts from './jsonStorage/texts.json'
+import { getEpisodes } from '../functions'
+import texts from '../jsonStorage/texts.json'
 
 export function loader({ params: { seasonNumber } }) {
   const episodes = getEpisodes(seasonNumber)
@@ -53,7 +53,7 @@ function Season() {
             {/* Список серий */}
             <div className="all-series">
               {episodes.map(({ episode, img, thumbnailDescription }) => {
-                const imgPath = require(`./img/seasons/${number}season/${img}`)
+                const imgPath = require(`../img/seasons/${number}season/${img}`)
 
                 return (
                   <div key={episode} className="seria-contain">

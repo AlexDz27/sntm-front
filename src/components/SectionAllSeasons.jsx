@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import texts from './jsonStorage/texts.json'
-import allSeasons from './jsonStorage/allSeasonsRenderingData.json'
+import texts from '../jsonStorage/texts.json'
+import allSeasons from '../jsonStorage/allSeasonsRenderingData.json'
 
 function SectionAllSeasons() {
   return (
@@ -43,7 +43,7 @@ function SectionAllSeasons() {
             {/* Список сезонов */}
             <div className="all-seasons">
               {allSeasons.map(({ number, episodesCount }) => {
-                const thumbnail = require(`./img/seasons/${number}season/season.png`)
+                const thumbnail = require(`../img/seasons/${number}season/season.png`)
 
                 return (
                   <div key={number} className="season-contain">

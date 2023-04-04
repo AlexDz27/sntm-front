@@ -1,5 +1,5 @@
 import { useRouteError } from 'react-router-dom'
-import { APP_ENVIRONMENT } from './env'
+import { APP_ENVIRONMENT } from '../env'
 
 export default function ErrorPage() {
   const error = useRouteError()

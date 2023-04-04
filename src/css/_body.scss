@@ -1,6 +1,6 @@
-
-
-
+html {
+    height: 100%;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -8,6 +8,11 @@ body {
     // background-color: $bg-color;
     background-image: url('../img/main/bear-bg.jpg');
     margin: 0;
+    height: 100%;
+}
+
+.root {
+    height: 100%;
 }
 
 @font-face {
@@ -18,6 +23,3 @@ body {
     font-style: normal; 
     font-weight: normal; 
     }
-
-
-

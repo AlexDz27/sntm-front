@@ -1,8 +1,13 @@
+.main {
+    height: calc(100% - 101px - 25px - 6px);
+}
+
 .main-contents {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 .auth-header {

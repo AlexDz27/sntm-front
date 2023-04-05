@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import { isPasswordStrong } from '../functions'
 import { useRef, useState } from 'react'
 import { BACKEND_URL } from '../env'
 import { Header } from '../components/Header'
 import { GENERIC_SERVER_ERROR_USER_MESSAGE } from '../constants'
+import { Loader } from '../components/Loader'
 
 function Register() {
   const loginRef = useRef(null)
@@ -11,6 +13,8 @@ function Register() {
   const badPasswordText =
     'Пароль должен содержать минимум 8 букв, хотя бы одну большую букву, хотя бы один из символов (+!@#$%^&*_-) и хотя бы одну цифру'
   const [errorText, setErrorText] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate()
 
   function register(e) {
     e.preventDefault()
@@ -27,6 +31,7 @@ function Register() {
       return
     }
 
+    setIsLoading(true)
     // Send request
     fetch(`${BACKEND_URL}/register`, {
       method: 'POST',
@@ -44,15 +49,16 @@ function Register() {
           return
         }
 
-        // 3. all good - user created -> here i should redirect probably and then display username on homepage
-        // ...
+        // All good - user created
+        
+        navigate('/')
       })
       .catch((err) => {
         // Means that server is completely unresponsive or there was error with that particular endpoint
-        if (err.toString() === 'TypeError: Failed to fetch') {
-          setErrorText(GENERIC_SERVER_ERROR_USER_MESSAGE)
-        }
+        // The error will be 'TypeError: Failed to fetch'
+        setErrorText(GENERIC_SERVER_ERROR_USER_MESSAGE)
       })
+      .finally(() => setIsLoading(false))
   }
 
   return (
@@ -65,39 +71,29 @@ function Register() {
             <h1 className="auth-header">Регистрация</h1>
 
             <form className="auth-form" onSubmit={register}>
-              {
-                errorText && (
-                  <div className="format-error--bigger">
-                    {errorText}
-                  </div>
-                )
-              }
-              
+              {errorText && <div className="format-error--bigger">{errorText}</div>}
+
               <div>
                 Логин <br />
                 <input ref={loginRef} name="login" required minLength={2} />
               </div>
               <div className="mb-small">
                 Пароль <br />
-                {isBadPassword && (
-                  <div className="format-error">{badPasswordText}</div>
-                )}
+                {isBadPassword && <div className="format-error">{badPasswordText}</div>}
                 <input
                   ref={passwordRef}
                   type="password"
                   name="password"
                   required
-                  onClick={() =>
-                    passwordRef.current.classList.remove('bad-input')
-                  }
-                  onFocus={() =>
-                    passwordRef.current.classList.remove('bad-input')
-                  }
+                  onClick={() => passwordRef.current.classList.remove('bad-input')}
+                  onFocus={() => passwordRef.current.classList.remove('bad-input')}
                 />
               </div>
-              <div>
+              <div className="mb-small">
                 <button type="submit">Зарегистрироваться!</button>
               </div>
+
+              <div>{isLoading && <Loader />}</div>
             </form>
           </div>
         </div>

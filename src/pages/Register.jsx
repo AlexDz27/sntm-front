@@ -3,15 +3,13 @@ import { isPasswordStrong } from '../functions'
 import { useRef, useState } from 'react'
 import { BACKEND_URL } from '../env'
 import { Header } from '../components/Header'
-import { GENERIC_SERVER_ERROR_USER_MESSAGE } from '../constants'
+import { BAD_PASSWORD_TEXT, GENERIC_SERVER_ERROR_USER_MESSAGE } from '../constants'
 import { Loader } from '../components/Loader'
 
 function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn }) {
   const loginRef = useRef(null)
   const passwordRef = useRef(null)
   const [isBadPassword, setIsBadPassword] = useState(false)
-  const badPasswordText =
-    'Пароль должен содержать минимум 8 букв, хотя бы одну большую букву, хотя бы один из символов (+!@#$%^&*_-) и хотя бы одну цифру'
   const [errorText, setErrorText] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
@@ -80,7 +78,7 @@ function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn }) {
               </div>
               <div className="mb-small">
                 Пароль <br />
-                {isBadPassword && <div className="format-error">{badPasswordText}</div>}
+                {isBadPassword && <div className="format-error">{BAD_PASSWORD_TEXT}</div>}
                 <input
                   ref={passwordRef}
                   type="password"

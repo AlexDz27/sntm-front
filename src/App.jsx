@@ -8,6 +8,7 @@ import { Season, loader as episodesLoader } from './pages/Season'
 import { Episode, loader as singleEpisodeLoader } from './pages/Episode'
 import { Register } from './pages/Register'
 import { Login } from './pages/Login'
+import { Logout } from './pages/Logout'
 
 // TODO: props, then useContext
 function App({ cookieLogin, cookieIsUserLoggedIn }) {
@@ -50,6 +51,11 @@ function App({ cookieLogin, cookieIsUserLoggedIn }) {
     {
       path: '/login',
       element: <Login isUserLoggedIn={isUserLoggedIn} setLogin={(login) => setLogin(login)} setIsUserLoggedIn={(value) => setIsUserLoggedIn(value)} />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: '/logout',
+      element: <Logout logOut={() => {setLogin(null); setIsUserLoggedIn(false)}} />,
       errorElement: <ErrorPage />
     },
   ])

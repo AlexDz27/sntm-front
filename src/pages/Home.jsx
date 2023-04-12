@@ -1,14 +1,14 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, ScrollRestoration } from 'react-router-dom'
 import titleImg from '../img/title-img.jpg'
 import futuramaPic from '../img/cartoon/futurama.png'
 import simpsPic from '../img/cartoon/simpsons.png'
 import southparkPic from '../img/cartoon/southpark.png'
 import { Header } from '../components/Header'
 
-function Home() {
+function Home({ login, isUserLoggedIn }) {
   return (
     <>
-      <Header />
+      <Header login={login} isUserLoggedIn={isUserLoggedIn} />
 
       {/* картинка под шапкой */}
       <div className="img-title">
@@ -148,6 +148,8 @@ function Home() {
         </div>
       </footer>
       {/* //Footer сайта */}
+
+      <ScrollRestoration />
     </>
   )
 }

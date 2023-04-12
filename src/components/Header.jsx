@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import registrationPic from '../img/header/registr.svg'
+import { useOutsideClick } from '../functions'
 
-function Header() {
+function Header({ login, isUserLoggedIn }) {
+  const {isShown: isAuthMenuShown, setIsShown: setIsAuthMenuShown, componentRef: authMenuRef} = useOutsideClick()
+
   const wLP = window.location.pathname
 
   return (
@@ -64,11 +67,27 @@ function Header() {
             {/* //Заголовок сайта */}
 
             {/* Регистрация */}
-            <Link to="/register">
-              <div className="content-reg">
+            <div onClick={() => setIsAuthMenuShown(!isAuthMenuShown)} className="content-reg">
+              <div>
+                {login && <span className="hi-username">Привет, {login}</span>}
                 <img src={registrationPic} alt="Регистрация" className="header-reg" />
               </div>
-            </Link>
+              {isAuthMenuShown && (
+                <div ref={authMenuRef} className={`auth-menu ${!isUserLoggedIn && 'auth-menu--not-logged-in'}`}>
+                  {isUserLoggedIn ? (
+                    <>
+                      <div className="auth-menu__bar"><Link to="/logout">Выйти из профиля</Link></div>
+                      <div className="auth-menu__bar"><Link to="/login">Залогиниться в другой профиль</Link></div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="auth-menu__bar"><Link to="/register">Зарегистрироваться</Link></div>
+                      <div className="auth-menu__bar"><Link to="/login">Залогиниться</Link></div>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
             {/* //Регистрация */}
 
             {/* Навигация для моб версии */}

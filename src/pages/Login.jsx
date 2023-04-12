@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { BACKEND_URL } from '../env'
 import { Header } from '../components/Header'
 
-function Login() {
+function Login({ isUserLoggedIn }) {
   const loginRef = useRef(null)
   const passwordRef = useRef(null)
   const [isBadPassword, setIsBadPassword] = useState(false)
@@ -37,7 +37,7 @@ function Login() {
 
   return (
     <>
-      <Header />
+      <Header isUserLoggedIn={isUserLoggedIn} />
 
       <main className="main">
         <div className="main-contents">

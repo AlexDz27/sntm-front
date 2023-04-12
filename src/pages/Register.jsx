@@ -6,7 +6,7 @@ import { Header } from '../components/Header'
 import { GENERIC_SERVER_ERROR_USER_MESSAGE } from '../constants'
 import { Loader } from '../components/Loader'
 
-function Register() {
+function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn }) {
   const loginRef = useRef(null)
   const passwordRef = useRef(null)
   const [isBadPassword, setIsBadPassword] = useState(false)
@@ -50,7 +50,8 @@ function Register() {
         }
 
         // All good - user created
-        
+        setLogin(response.login)
+        setIsUserLoggedIn(true)
         navigate('/')
       })
       .catch((err) => {
@@ -63,7 +64,7 @@ function Register() {
 
   return (
     <>
-      <Header />
+      <Header isUserLoggedIn={isUserLoggedIn} />
 
       <main className="main">
         <div className="main-contents">

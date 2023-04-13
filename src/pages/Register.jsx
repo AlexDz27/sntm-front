@@ -6,7 +6,7 @@ import { Header } from '../components/Header'
 import { BAD_PASSWORD_TEXT, GENERIC_SERVER_ERROR_USER_MESSAGE } from '../constants'
 import { Loader } from '../components/Loader'
 
-function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn }) {
+function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn, setToasterUserMessage }) {
   const loginRef = useRef(null)
   const passwordRef = useRef(null)
   const [isBadPassword, setIsBadPassword] = useState(false)
@@ -51,6 +51,7 @@ function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn }) {
         setLogin(response.login)
         setIsUserLoggedIn(true)
         navigate('/')
+        setToasterUserMessage(response.userMessage)
       })
       .catch((err) => {
         // Means that server is completely unresponsive or there was error with that particular endpoint

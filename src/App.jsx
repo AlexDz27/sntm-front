@@ -10,8 +10,8 @@ import { Register } from './pages/Register'
 import { Login } from './pages/Login'
 import { Logout } from './pages/Logout'
 import { Toaster } from './components/Toaster'
+import { AppContext } from './context'
 
-// TODO: props, then useContext
 function App({ cookieLogin, cookieIsUserLoggedIn }) {
   const [login, setLogin] = useState(cookieLogin)
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(cookieIsUserLoggedIn)
@@ -21,16 +21,14 @@ function App({ cookieLogin, cookieIsUserLoggedIn }) {
   useEffect(() => {
     if (toasterUserMessage?.length > 0) {
       setIsToasterShown(true)
-      setTimeout(() => {
-        setIsToasterShown(false)
-      }, 3000)
+      setTimeout(() => setIsToasterShown(false), 3000)
     }
   }, [toasterUserMessage])
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home login={login} isUserLoggedIn={isUserLoggedIn} />,
+      element: <Home />,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -59,7 +57,6 @@ function App({ cookieLogin, cookieIsUserLoggedIn }) {
       path: '/register',
       element: (
         <Register
-          isUserLoggedIn={isUserLoggedIn}
           setLogin={(login) => setLogin(login)}
           setIsUserLoggedIn={(value) => setIsUserLoggedIn(value)}
           setToasterUserMessage={(userMessage) => setToasterUserMessage(userMessage)}
@@ -71,7 +68,6 @@ function App({ cookieLogin, cookieIsUserLoggedIn }) {
       path: '/login',
       element: (
         <Login
-          isUserLoggedIn={isUserLoggedIn}
           setLogin={(login) => setLogin(login)}
           setIsUserLoggedIn={(value) => setIsUserLoggedIn(value)}
           setToasterUserMessage={(userMessage) => setToasterUserMessage(userMessage)}
@@ -94,10 +90,12 @@ function App({ cookieLogin, cookieIsUserLoggedIn }) {
   ])
 
   return (
-    <div className="app" id="app">
-      <Toaster userMessage={toasterUserMessage} isShown={isToasterShown} />
-      <RouterProvider router={router} />
-    </div>
+    <AppContext.Provider value={{auth: {login, isUserLoggedIn}}}>
+      <div className="app" id="app">
+        <Toaster userMessage={toasterUserMessage} isShown={isToasterShown} />
+        <RouterProvider router={router} />
+      </div>
+    </AppContext.Provider>
   )
 }
 

@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import registrationPic from '../img/header/registr.svg'
 import { useOutsideClick } from '../functions'
+import { useContext } from 'react'
+import { AppContext } from '../context'
 
-function Header({ login, isUserLoggedIn }) {
+function Header() {
+  const { login, isUserLoggedIn } = useContext(AppContext).auth
+
   const {isShown: isAuthMenuShown, setIsShown: setIsAuthMenuShown, componentRef: authMenuRef} = useOutsideClick()
 
   const wLP = window.location.pathname

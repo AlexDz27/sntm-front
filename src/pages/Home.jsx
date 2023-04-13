@@ -5,10 +5,10 @@ import simpsPic from '../img/cartoon/simpsons.png'
 import southparkPic from '../img/cartoon/southpark.png'
 import { Header } from '../components/Header'
 
-function Home({ login, isUserLoggedIn }) {
+function Home() {
   return (
     <>
-      <Header login={login} isUserLoggedIn={isUserLoggedIn} />
+      <Header />
 
       {/* картинка под шапкой */}
       <div className="img-title">

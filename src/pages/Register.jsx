@@ -63,7 +63,7 @@ function Register({ isUserLoggedIn, setLogin, setIsUserLoggedIn, setToasterUserM
 
   return (
     <>
-      <Header isUserLoggedIn={isUserLoggedIn} />
+      <Header />
 
       <main className="main">
         <div className="main-contents">

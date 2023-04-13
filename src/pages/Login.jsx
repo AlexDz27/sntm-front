@@ -63,7 +63,7 @@ function Login({ isUserLoggedIn, setLogin, setIsUserLoggedIn, setToasterUserMess
 
   return (
     <>
-      <Header isUserLoggedIn={isUserLoggedIn} />
+      <Header />
 
       <main className="main">
         <div className="main-contents">
